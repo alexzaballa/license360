@@ -5,17 +5,21 @@ License360 is a tool to help with checking Oracle Database license usage.
 1. Unzip license360.zip, navigate to the root license360 directory, and connect as SYS, 
    DBA, or any User with Data Dictionary access:
 
+```
    $ unzip license360.zip
    $ cd license360
    $ sqlplus / as sysdba
+```
 
 2. Execute license360.sql.
 
+```
    SQL> @license360.sql
-
+```
 
 Usage: 
 
+```
 @license360
 
 @license360 N L
@@ -27,7 +31,7 @@ Usage:
 @license360 T F 1
 
 @license360 T F 1-3
-
+```
 
 1st parameter: (T)uning pack, (D)iagnostic pack, (N)one - Default (N)
 2nd parameter: (F)ull, (L)ight, (E)xtra Light  - Default (L)
