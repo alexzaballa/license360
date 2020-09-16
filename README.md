@@ -1,6 +1,6 @@
 # License360
 
-License360 is a tool to check Oracle Database license usage.
+License360 is a tool to help on checking Oracle Database license usage.
 
 1. Unzip license360.zip, navigate to the root license360 directory, and connect as SYS, 
    DBA, or any User with Data Dictionary access:
