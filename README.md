@@ -47,21 +47,27 @@ Usage:
 
 1. As License360 can run for a long time, in some systems it's recommend to execute it unattended:
 
+```
    $ nohup sqlplus / as sysdba @license360.sql T F &
+```
 
 2. If you need to execute License360 against all databases in the host, use license360.sh:
 
+```
    $ unzip license360.zip
    $ cd license360
    $ sh license360.sh T F
-   
+```
+
 3. If you need to execute only a portion of License360 (i.e. a column, section or range) use 
    these commands. Notice first parameter can be set to one section (i.e. 1c),
    one column (i.e. 3), a range of sections (i.e. 1a-2a) or range of columns (i.e. 1-2):
 
+```
    SQL> @license360.sql T F 1
-   
-   note: valid column range for last parameter is 1 to 4. 
+```
+
+   note: valid column range for last parameter is 1 to 6. 
 
 
 ## Versions ##
