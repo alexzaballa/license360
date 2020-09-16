@@ -1,0 +1,52 @@
+-- Add or remove new Sections in this file. No need to update anywhere else.
+-- Use "," as field separator
+-- Format: Section ID [1a - 9z], File Sufix Name, Section Description, Skip Variables (If last field is empty or its variables return NULL, sql WILL be executed)
+--
+1a,configuration.sql,'Database Configuration'
+1b,opatch.sql,'Patch Info',&&skip_lic_param_run_full.
+1c,resources.sql,'Resources (as per AWR and MEM)',&&skip_lic_param_run_full.
+1d,features.sql,'Options - Usage Statistics'
+--
+2a,admin.sql,'Database Administration',&&skip_lic_param_run_full.
+2b,storage.sql,'Storage',&&skip_lic_param_run_full.
+2c,asm.sql,'Automatic Storage Management (ASM)',&&skip_lic_param_run_full.
+2d,rman.sql,'Backup and Recovery',&&skip_lic_param_run_full.
+2e,security.sql,'User Security Configuration',&&skip_lic_param_run_full.
+2f,profiles.sql,'DB Profiles',&&skip_lic_param_run_full.
+2g,secsystem.sql,'System Privilege Analyses',&&skip_lic_param_run_full.
+2h,secroles.sql,'Roles Privilege Analyses',&&skip_lic_param_run_full.
+--
+3a,resource_mgm.sql,'Database Resource Management (DBRM)',&&skip_lic_param_run_full.
+3b,plan_stability.sql,'Plan Stability',&&skip_lic_param_run_full.
+3c,cbo_stats.sql,'Cost-based Optimizer (CBO) Statistics',&&skip_lic_param_run_full.
+3d,performance.sql,'Performance Summaries',&&skip_lic_param_run_full.
+3e,os_stats.sql,'Operating System (OS) Statistics History',&&skip_lic_param_run_full.
+3f,sessions.sql,'Sessions',&&skip_lic_param_run_full.
+3g,dataguard.sql,'Data Guard Primary Site',&&skip_lic_param_run_full.
+3h,goldengate.sql,'Golden Gate',&&skip_lic_param_run_full.
+--
+4a,network.sql,'Network',&&skip_lic_param_run_full.
+4b,oscheck.sql,'OS Security Checks',&&skip_lic_param_run_full.
+--
+5a,active_dg.sql,'Active Dataguard',&&skip_lic_param_run_light.
+5b,adv_comp.sql,'Advanced Compression',&&skip_lic_param_run_light.
+5c,adv_sec.sql,'Advanced Security',&&skip_lic_param_run_light.
+5d,datamining.sql,'Data Mining',&&skip_lic_param_run_light.
+5e,db_vault.sql,'Database Vault',&&skip_lic_param_run_light.
+5f,inmemory.sql,'In-Memory',&&skip_lic_param_run_light.
+5g,ols.sql,'Label Security',&&skip_lic_param_run_light.
+5h,lmp.sql,'Lifecycle Management Pack',&&skip_lic_param_run_light.
+5i,tuning_pack.sql,'Tuning Pack',&&skip_lic_param_run_light.
+--
+6a,olap.sql,'On-Line Analytical Processing (OLAP)',&&skip_lic_param_run_light.
+6b,partitioning.sql,'Partitioning',&&skip_lic_param_run_light.
+6c,rac.sql,'Real Application Clusters (Oracle RAC)',&&skip_lic_param_run_light.
+6d,racone.sql,'Real Application Clusters (RAC ONE NODE)',&&skip_lic_param_run_light.
+6e,rat.sql,'Real Application Testing',&&skip_lic_param_run_light.
+6f,spatial.sql,'Spatial and Graph',&&skip_lic_param_run_light.
+6g,management.sql,'Management Packs',&&skip_lic_param_run_light.
+6h,secure_bkp.sql,'Secure Backup',&&skip_lic_param_run_light.
+6i,multitenant.sql,'Multitenant',&&skip_lic_param_run_light.
+--
+-- Note: You can optionally have sections 0a_pre.sql and 0b_post.sql (not defined on this csv).
+-- They are not mandatory and they instruct moat to run only once a initial sql before all of them (0a) or after all of them (0b).
