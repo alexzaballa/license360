@@ -10,6 +10,7 @@ FROM
     gv$backup_piece
 WHERE
     backed_by_osb = 'YES'
+    and rownum<2
 ]';
 END;
 /
