@@ -166,6 +166,10 @@ FROM   db
 ]';
 END;        
 /
+  
+DEF skip_text = '';
+DEF skip_csv = '';
+
 @@&&9a_pre_one.
 
 UNDEF processor_model
