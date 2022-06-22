@@ -358,7 +358,7 @@ DEF skip_csv = '';
 /*****************************************************************************************/
 DEF title = 'Feature Usage Details';
 DEF main_table = 'DBA_FEATURE_USAGE_STATISTICS';
-COL EXTRA_FEATURE_INFO FORMAT A50;
+COL EXTRA_FEATURE_INFO FORMAT A50
 
 BEGIN
   :sql_text := q'[
@@ -627,3 +627,6 @@ DEF skip_text = '';
 DEF skip_csv = '';
 
 @@&&9a_pre_one.
+
+COL EXTRA_FEATURE_INFO CLEAR
+
